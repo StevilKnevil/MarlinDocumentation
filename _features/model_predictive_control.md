@@ -224,17 +224,17 @@ $$ \alpha_s = \dfrac{\alpha_b . (T_s(t) - T_{asymp})}{T_s(t) - T_{asymp} - (T_a 
 
 If asymptotic tuning (above) fails, or Differential Tuning is forced with `M306 TD` then automatic tuning uses the following algorithm.
 
-As the block is heated from ambient, the maximum rate of heating, $R_f$, can be used to establish `MPC_BLOCK_HEAT_CAPACITY` in J/K, using:
+As the block is heated from ambient, the maximum rate of heating, $$R_f$$, can be used to establish `MPC_BLOCK_HEAT_CAPACITY` in J/K, using:
 
 $$ C_b = \dfrac{P}{R_f} $$
 
-Furthermore, the temperature, $T_f$, and time, $t_f$, at which the rate of heating is fastest can be used to get `MPC_SENSOR_RESPONSIVENESS` in K/s/K using:
+Furthermore, the temperature, $$T_f$$, and time, $$t_f$$, at which the rate of heating is fastest can be used to get `MPC_SENSOR_RESPONSIVENESS` in K/s/K using:
 
 $$ \alpha_s = \dfrac{R_f}{R_f.t_f + T_{s0} - T_f} $$
 
-Where $ T_{s0} = T_a = $ starting ambient temperature
+Where $$ T_{s0} = T_a = $$ starting ambient temperature
 
-Finally, to calculate the ambient transfer coefficients, the hotend is heated to a steady state sensor temperature, $ T_s $ and the ambient transfer coefficient is given by (from eq. 12):
+Finally, to calculate the ambient transfer coefficients, the hotend is heated to a steady state sensor temperature, $$ T_s $$ and the ambient transfer coefficient is given by (from eq. 12):
 
 $$ h_a = \dfrac{P}{T_s - T_{s0}} $$
 
